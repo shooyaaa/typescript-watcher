@@ -1,7 +1,7 @@
 # typescript-watcher
 On the fly typescript file watcher, auto compile and auto reload browser
 
-# Dependency ： fswatch
+# Dependency ： fswatch, chromedriver
 
 # Modify config.js  
  1. port : A http server will serve your static files running at this port  
