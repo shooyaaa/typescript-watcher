@@ -77,12 +77,12 @@ fswatch.stderr.on('data', (data) => {
 let compile = null
 fswatch.stdout.on('data', (data) => {
     console.log('file watch ' + data)
-    compile = spawn('tsc', ['-p', config.src, '--outDir', config.compile])
+    compile = spawn('tsc', ['-p', config.root, '--outDir', config.compile])
     compile.stderr.on('data', data => {
         console.log('Compile error ' + data)
     })
     compile.stdout.on('data', data => {
-        console.log(data)
+        console.log('Compile output ' + data)
     })
     compile.on('exit', (code, signal) => {
         if (code == 0) {
